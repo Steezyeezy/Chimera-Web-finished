@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-black hover:text-gold transition;
+  }
+  
+  .nav-link-active {
+    @apply text-gold;
+  }
+  
+  .mobile-nav-link {
+    @apply block py-2 text-lg hover:text-gold transition;
+  }
+
+  .hero-section {
+    background-image: url('/images/herophoto.webp');
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      background-image: url('/images/custom-venthood-kitchen.jpg');
+    }
+  }
+}
+
+@layer utilities {
+  .bg-gold {
+    background-color: #c79f0e;
+  }
+  
+  .bg-gold-dark {
+    background-color: #a38409;
+  }
+  
+  .text-gold {
+    color: #c79f0e;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
